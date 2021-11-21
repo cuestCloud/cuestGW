@@ -8,8 +8,7 @@ pipeline {
         }
 		stage('Test') {
             steps {                
-                def response = httpRequest "http://localhost:8081/stat/all"    
-				println('Status: '+response.status)				
+                httpRequest "http://localhost:8081/stat/all"    				
             }
         }
      }    
