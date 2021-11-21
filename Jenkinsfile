@@ -8,7 +8,7 @@ pipeline {
         }
 		stage('Test') {
             steps {                
-                httpRequest "http://localhost:8081/stat/allBad"    				
+                httpRequest httpMode: 'POST', requestBody: "{ num:1 }", url:"http://localhost:8081/invoke/func"    				
             }
         }
      }    
