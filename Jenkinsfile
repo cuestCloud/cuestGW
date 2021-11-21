@@ -8,7 +8,7 @@ pipeline {
         }
 		stage('Test') {
             steps {                
-                httpRequest "http://localhost:8081/stat/all"    				
+                httpRequest "http://localhost:8081/stat/allBad"    				
             }
         }
      }    
